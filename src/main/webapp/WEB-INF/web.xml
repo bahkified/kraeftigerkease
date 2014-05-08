@@ -13,7 +13,7 @@
 
     <servlet-mapping>
         <servlet-name>site</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/site/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
