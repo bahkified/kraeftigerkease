@@ -2,11 +2,6 @@
 <%@ include file="header.jsp"%>
 
 <html>
-<head>
-    <script>
-        var response_message = "<c:out value="${message}"/>";
-    </script>
-</head>
 <body>
 
 <div class="container-fluid appContainer">

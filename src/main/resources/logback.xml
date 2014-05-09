@@ -10,7 +10,7 @@
         <file>${catalina.base}/logs/KraeftigerKaese.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${catalina.base}/logs/torrens-payment-%d{yyyy-MM-dd_HH}.log</fileNamePattern>
+            <fileNamePattern>${catalina.base}/logs/KraeftigerKaese-%d{yyyy-MM-dd_HH}.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>100MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
