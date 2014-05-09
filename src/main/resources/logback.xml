@@ -7,7 +7,7 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${catalina.base}/logs/torrnes-payment.log</file>
+        <file>${catalina.base}/logs/KraeftigerKaese.log</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${catalina.base}/logs/torrens-payment-%d{yyyy-MM-dd_HH}.log</fileNamePattern>

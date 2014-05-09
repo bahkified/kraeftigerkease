@@ -14,12 +14,15 @@
         </div>
 
         <div class="collapse navbar-collapse" id="ksite-navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-left">
                 <li><a href="#">News</a> </li>
                 <li><a href="site/projects">Projects</a></li>
                 <li><a href="site/">Downloads</a></li>
                 <li><a href="site/spyware">Spyware</a></li>
                 <li><a href="site/openSSL">OpenSSL</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="site/contactUs">Contact Us</a></li>
             </ul>
         </div>
     </div>
