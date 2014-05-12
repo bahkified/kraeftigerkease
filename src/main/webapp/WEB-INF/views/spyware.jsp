@@ -7,7 +7,10 @@
 <div class="container-fluid appContainer">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="row">
-            <c:out value="${message}"/>
+            <h2>Spyware</h2>
+            <div class="lead">
+                TODO
+            </div>
         </div>
     </div>
 </div>

@@ -1,9 +1,9 @@
 package net.kraeftigerkase.website.controller;
 
-import net.kraeftigerkase.website.dto.EmailDto;
-import net.kraeftigerkase.website.utils.EmailUtil;
+import net.kraeftigerkase.website.service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,10 +16,38 @@ public class SiteController {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
 
+    @Autowired
+    private EmailService emailService;
+
     @RequestMapping("/index")
     public String getWelcomeScreen() {
         log.debug("Index!");
         return "index";
+    }
+
+    @RequestMapping("/news")
+    public String getNewsScreen() {
+        return "news";
+    }
+
+    @RequestMapping("/projects")
+    public String getProjectsScreen() {
+        return "projects";
+    }
+
+    @RequestMapping("/downloads")
+    public String getDownloadsScreen() {
+        return "downloads";
+    }
+
+    @RequestMapping("/spyware")
+    public String getSpywareScreen() {
+        return "spyware";
+    }
+
+    @RequestMapping("openSSL")
+    public String getOpenSSLScreen() {
+        return "openSSL";
     }
 
     @RequestMapping(value = "/contactUs", method = RequestMethod.GET)
@@ -30,15 +58,8 @@ public class SiteController {
 
     @RequestMapping(value = "/contactUs", method = RequestMethod.POST)
     public String sendContactEmail(HttpServletRequest request, Model model) {
-        EmailDto dto = new EmailDto();
-        dto.setName(request.getParameter("name"));
-        dto.setSubject(request.getParameter("subject"));
-        dto.setPhoneNumber(request.getParameter("phone"));
-        dto.setComments(request.getParameter("comments"));
-        dto.setEmailAddress(request.getParameter("email"));
-
         try {
-            EmailUtil.sendMessageToHome(dto);
+            emailService.sendMessageToHome(emailService.adaptRequest(request));
             model.addAttribute("message", "Thank you for message!");
         } catch(Exception e) {
             log.debug("Unable to send email!", e);

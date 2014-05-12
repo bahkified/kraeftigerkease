@@ -56,6 +56,7 @@
                 <div class="col-sm-10 controls">
                     <textarea class="form-control" id="inputComments" name="comments" required
                            data-validation-required-message="Cannot blank message. Please enter your comments."
+                           placeholder="Enter your comments and questions here."
                             rows="10"></textarea>
                     <p class="help-block"></p>
                 </div>
@@ -72,6 +73,8 @@
         </form>
     </div>
 </div>
+
+<jsp:include page="footer.jsp"/>
 
 </body>
 </html>
