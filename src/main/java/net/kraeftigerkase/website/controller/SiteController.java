@@ -1,5 +1,7 @@
 package net.kraeftigerkase.website.controller;
 
+import net.kraeftigerkase.website.dto.EmailDto;
+import net.kraeftigerkase.website.utils.EmailUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,12 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 public class SiteController {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
-
-    @RequestMapping("/")
-    public String goHome() {
-        log.debug("Home");
-        return "layout";
-    }
 
     @RequestMapping("/index")
     public String getWelcomeScreen() {
@@ -34,7 +30,22 @@ public class SiteController {
 
     @RequestMapping(value = "/contactUs", method = RequestMethod.POST)
     public String sendContactEmail(HttpServletRequest request, Model model) {
-        model.addAttribute("message", "This was a triumph!");
+        EmailDto dto = new EmailDto();
+        dto.setName(request.getParameter("name"));
+        dto.setSubject(request.getParameter("subject"));
+        dto.setPhoneNumber(request.getParameter("phone"));
+        dto.setComments(request.getParameter("comments"));
+        dto.setEmailAddress(request.getParameter("email"));
+
+        try {
+            EmailUtil.sendMessageToHome(dto);
+            model.addAttribute("message", "Thank you for message!");
+        } catch(Exception e) {
+            log.debug("Unable to send email!", e);
+            model.addAttribute("message", "We were currently experiencing technical difficulties and were unable"
+                    + " to send your message. Please try again later.");
+        }
+
         return "emailResp";
     }
 

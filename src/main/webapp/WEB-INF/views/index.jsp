@@ -7,8 +7,8 @@
 <div class="container-fluid appContainer">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <p>
-            <span class="lead">Welcome</span>
-            to Kr&auml;ftiger K&auml;se Technology, we provide IT solutions for a dynamic organization.
+            <span class="lead">Welcome to Kr&auml;ftiger K&auml;se Technology. &nbsp;</span>
+            We provide IT solutions for a dynamic organization.
             We can see the high costs of upgrading Operating Systems and the software associated with it.
             We are here to provide an alternative solution in the usage of Operating Systems and tools for growing
             organizations. We also provide the installations of Apache Web Server and PHP in a windows setting.

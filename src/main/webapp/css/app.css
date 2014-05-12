@@ -2,6 +2,10 @@
     margin: 25px 8px;
 }
 
+.help-block {
+    color: #a94442;
+}
+
 a {
     cursor: pointer;
 }

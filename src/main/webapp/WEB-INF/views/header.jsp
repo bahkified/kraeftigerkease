@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="site/index">Kraeftiger Kaese</a>
+            <a class="navbar-brand" href="site/index">Kr&auml;ftiger K&auml;se</a>
         </div>
 
         <div class="collapse navbar-collapse" id="ksite-navbar-collapse">
