@@ -1,8 +1,6 @@
 kraeftigerkease
 ===============
 
-Kraeftiger Kease site
-
 To grab a local copy of this project from Github, you can just clone it as usual:
 
 ```
